@@ -1,9 +1,23 @@
 {
-  "event_id": "sample-007-001",
-  "kind": "CRAFT_VERSIONED",
-  "occurred_at": "2026-09-20T09:00:00+08:00",
-  "subject_id": "demo-007",
+  "event_id": "sample-clearance-001",
+  "kind": "SESSION_CLEARED",
+  "occurred_at": "2026-10-02T09:00:00+08:00",
+  "subject_id": "demo-session-007",
+  "actor": "demo-officer-01",
   "payload": {
+    "session_id": "demo-session-007",
+    "outcome": "restricted",
+    "baseline": "sha256:0000000000000000",
+    "findings": [
+      {
+        "code": "allergy_conflict",
+        "severity": "block",
+        "message": "过敏声明与材料成分冲突（虚构）",
+        "subject_type": "participant",
+        "subject_id": "demo-child-02"
+      }
+    ],
+    "eligible_participant_ids": ["demo-child-01"],
     "note": "虚构资料，仅用于格式核对"
   }
 }
